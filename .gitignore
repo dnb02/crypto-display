@@ -1,2 +1,5 @@
 #ignore local api experimentation file
 second.py
+
+#ignoring api storage file
+api.txt

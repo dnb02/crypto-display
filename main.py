@@ -1,8 +1,8 @@
 import json
 import requests
-import pprint
 
-api = '858c01a1-651c-4343-8e01-89c39143b544' 
+with open('api.txt','r') as inp:
+    api = inp.read(36) 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 
 Headers={
@@ -15,9 +15,8 @@ getRequestParam = {
 
 getRequest = requests.get(url,params=getRequestParam,headers=Headers)
 recievedDataInJson = getRequest.json()
-# prettyRecievedDataInJson = pprint.pformat(recievedDataInJson)
+
 
 with open('cryptodata.json','w') as out:
 	json.dump(recievedDataInJson, out, indent= 4, sort_keys= True)
 
-#print(recievedDataInJson['data'])
