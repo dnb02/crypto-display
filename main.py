@@ -15,9 +15,9 @@ getRequestParam = {
 
 getRequest = requests.get(url,params=getRequestParam,headers=Headers)
 recievedDataInJson = getRequest.json()
-prettyRecievedDataInJson = pprint.pformat(recievedDataInJson)
+# prettyRecievedDataInJson = pprint.pformat(recievedDataInJson)
 
 with open('cryptodata.json','w') as out:
-	out.write(prettyRecievedDataInJson)
+	json.dump(recievedDataInJson, out, indent= 4, sort_keys= True)
 
 #print(recievedDataInJson['data'])
