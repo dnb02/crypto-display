@@ -1,29 +1,29 @@
 {
     "data": {
         "1": {
-            "circulating_supply": 18740381,
+            "circulating_supply": 18740956,
             "cmc_rank": 1,
             "date_added": "2013-04-28T00:00:00.000Z",
             "id": 1,
             "is_active": 1,
             "is_fiat": 0,
-            "last_updated": "2021-06-22T07:21:02.000Z",
+            "last_updated": "2021-06-23T06:20:02.000Z",
             "max_supply": 21000000,
             "name": "Bitcoin",
-            "num_market_pairs": 9067,
+            "num_market_pairs": 9125,
             "platform": null,
             "quote": {
                 "USD": {
-                    "last_updated": "2021-06-22T07:21:02.000Z",
-                    "market_cap": 611159107821.5139,
-                    "percent_change_1h": -0.17136628,
-                    "percent_change_24h": -0.84584872,
-                    "percent_change_30d": -10.1527708,
-                    "percent_change_60d": -33.67810543,
-                    "percent_change_7d": -18.90803553,
-                    "percent_change_90d": -41.36293841,
-                    "price": 32611.882747822143,
-                    "volume_24h": 51446305114.61622
+                    "last_updated": "2021-06-23T06:20:02.000Z",
+                    "market_cap": 639838790486.2957,
+                    "percent_change_1h": 1.24230108,
+                    "percent_change_24h": 4.38731533,
+                    "percent_change_30d": -3.46547885,
+                    "percent_change_60d": -32.293373,
+                    "percent_change_7d": -15.32159687,
+                    "percent_change_90d": -36.03316103,
+                    "price": 34141.20338825275,
+                    "volume_24h": 64387040311.43165
                 }
             },
             "slug": "bitcoin",
@@ -59,15 +59,15 @@
                 "multicoin-capital-portfolio",
                 "paradigm-xzy-screener"
             ],
-            "total_supply": 18740381
+            "total_supply": 18740956
         }
     },
     "status": {
         "credit_count": 1,
-        "elapsed": 17,
+        "elapsed": 31,
         "error_code": 0,
         "error_message": null,
         "notice": null,
-        "timestamp": "2021-06-22T07:21:44.809Z"
+        "timestamp": "2021-06-23T06:21:13.560Z"
     }
 }

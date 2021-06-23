@@ -1,5 +1,6 @@
-#ignore local api experimentation file
+#ignore experimentation file
 second.py
+third.py
 
 #ignoring api storage file
 api.txt
