@@ -4,3 +4,6 @@ third.py
 
 #ignoring api storage file
 api.txt
+
+#ignoring cryptodata file for now 
+cryptodata.json

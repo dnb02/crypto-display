@@ -7,23 +7,23 @@
             "id": 1,
             "is_active": 1,
             "is_fiat": 0,
-            "last_updated": "2021-06-23T06:20:02.000Z",
+            "last_updated": "2021-06-23T07:00:02.000Z",
             "max_supply": 21000000,
             "name": "Bitcoin",
             "num_market_pairs": 9125,
             "platform": null,
             "quote": {
                 "USD": {
-                    "last_updated": "2021-06-23T06:20:02.000Z",
-                    "market_cap": 639838790486.2957,
-                    "percent_change_1h": 1.24230108,
-                    "percent_change_24h": 4.38731533,
-                    "percent_change_30d": -3.46547885,
-                    "percent_change_60d": -32.293373,
-                    "percent_change_7d": -15.32159687,
-                    "percent_change_90d": -36.03316103,
-                    "price": 34141.20338825275,
-                    "volume_24h": 64387040311.43165
+                    "last_updated": "2021-06-23T07:00:02.000Z",
+                    "market_cap": 635283058276.4086,
+                    "percent_change_1h": -1.34618728,
+                    "percent_change_24h": 3.17811158,
+                    "percent_change_30d": -6.31569061,
+                    "percent_change_60d": -32.53207864,
+                    "percent_change_7d": -16.12688058,
+                    "percent_change_90d": -36.24322211,
+                    "price": 33898.11375024884,
+                    "volume_24h": 63886291057.98953
                 }
             },
             "slug": "bitcoin",
@@ -64,10 +64,10 @@
     },
     "status": {
         "credit_count": 1,
-        "elapsed": 31,
+        "elapsed": 19,
         "error_code": 0,
         "error_message": null,
         "notice": null,
-        "timestamp": "2021-06-23T06:21:13.560Z"
+        "timestamp": "2021-06-23T07:01:15.517Z"
     }
 }

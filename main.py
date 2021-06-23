@@ -1,40 +1,42 @@
 import requests
 import json
-import tkinter as tk
+import tkinter 
 
-val = 0
+requestedValue = 0
 
 def config():
-	stri.set(str(val))
+	changeDisplayValue.set(str(requestedValue))
 
 def getValue():
-	global val
+	global requestedValue
 	with open('api.txt','r') as inp:
 		api = inp.read(36) 
 
-	url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=1'
+	url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
 
 	Headers={
 		'Accept': 'application/json'
 	}
 	getRequestParam = {
-		'CMC_PRO_API_KEY': api
+		'CMC_PRO_API_KEY': api,
+		'id':'1'
 	}
 
 
 	getRequest = requests.get(url,params=getRequestParam,headers=Headers)
 	recievedDataInJson = getRequest.json()
-
-
-	with open('cryptodata.json','w') as out:
-		json.dump(recievedDataInJson, out, indent= 4, sort_keys= True)
-
-	val = recievedDataInJson["data"]["1"]["quote"]["USD"]["percent_change_1h"]
+	requestedValue = recievedDataInJson["data"]["1"]["quote"]["USD"]["percent_change_1h"]
 	config()
+#   This part of code saved the received data to a json file 
 
-root = tk.Tk()
-stri = tk.StringVar(root)
-stri.set('0')
-button = tk.Button(root, text ="Get Value", command = getValue ).pack()
-display = tk.Label(root,textvariable = stri ).pack()
-root.mainloop()
+#	with open('cryptodata.json','w') as out:
+#		json.dump(recievedDataInJson, out, indent= 4, sort_keys= True)
+
+	
+
+mainWindow = tkinter.Tk()
+changeDisplayValue = tkinter.StringVar(mainWindow)
+changeDisplayValue.set('0')
+button = tkinter.Button(mainWindow, text ="Get Value", command = getValue ).pack()
+display = tkinter.Label(mainWindow,textvariable = changeDisplayValue ).pack()
+mainWindow.mainloop()
