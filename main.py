@@ -3,14 +3,11 @@ import json
 import tkinter 
 
 class application:
-	
-	def getValue(self):
 
+	def getValue(self):
 		with open('api.txt','r') as inp:
 			api = inp.read(36) 
-
 		url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
-
 		Headers={
 			'Accept': 'application/json'
 		}
@@ -18,8 +15,6 @@ class application:
 			'CMC_PRO_API_KEY': api,
 			'id':'1'
 		}
-
-
 		getRequest = requests.get(url,params=getRequestParam,headers=Headers)
 		recievedDataInJson = getRequest.json()
 		requestedValue = recievedDataInJson["data"]["1"]["quote"]["USD"]["percent_change_1h"]
