@@ -11,9 +11,9 @@ def jsondumper():
 	reddit.validate_on_submit=True
 	with open('dump.json') as inp:
 		dumpValue=json.load(inp)
-	selftext = str(dumpValue)
+	selftext = "{}".format(dumpValue)
 	title = "-json-dump-"
-	reddit.subreddit("jsondump").submit(title, selftext=selftext)
+	reddit.subreddit("jsondump").submit(title, selftext=json.dumps(dumpValue))
 
 
 def getValue():
@@ -31,13 +31,15 @@ def getValue():
 	recievedValue = response.json()
 	with open('dump.json','r') as inp:
 		dumpValue=json.load(inp)
+	
 	while(len(dumpValue['1'])>23):
 		for i in list_id:
-			dumpValue[str(i)].pop(0)
+			dumpValue["{}".format(i)].pop(0)
 	for i in list_id:
-		dumpValue[str(i)].append(str(recievedValue['data'][str(i)]['quote']['USD']['price']))
+		dumpValue["{}".format(i)].append("{}".format(recievedValue['data'][str(i)]['quote']['USD']['price']))
+	
 	with open('dump.json','w') as out:
-		json.dump(dumpValue,out,indent=4)
+		json.dump(dumpValue,out,indent = 2)
 
 if __name__ == "__main__":
 	getValue()
